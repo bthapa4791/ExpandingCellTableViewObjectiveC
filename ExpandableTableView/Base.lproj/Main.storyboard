@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5jR-94-Kj1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="R90-Gu-Ijv">
+            <objects>
+                <viewController id="5jR-94-Kj1" customClass="TableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5rB-Hv-uKQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="QoK-4T-cWB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="16r-Vn-Bai">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-wr-LM7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.090931650870000005" green="0.71053695839999997" blue="0.84012276789999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Expandable Table Cell" id="Ox1-GC-dPt"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="EOt-si-Zsi">
+                                <rect key="frame" x="0.0" y="42" width="600" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TVy-9f-tvY">
+                                        <rect key="frame" x="0.0" y="22" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TVy-9f-tvY" id="824-sh-V2e">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5jR-94-Kj1" id="Grx-Gf-j90"/>
+                                    <outlet property="delegate" destination="5jR-94-Kj1" id="wqR-YB-xrI"/>
+                                </connections>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="29C-jM-L4S">
+                                <rect key="frame" x="0.0" y="44" width="375" height="600"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="5jR-94-Kj1" id="i1w-RS-X5n"/>
+                                    <outlet property="delegate" destination="5jR-94-Kj1" id="nfy-tC-BdP"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QoK-4T-cWB" firstAttribute="top" secondItem="29C-jM-L4S" secondAttribute="bottom" constant="23" id="GFG-UG-A5H"/>
+                            <constraint firstItem="0g8-wr-LM7" firstAttribute="top" secondItem="16r-Vn-Bai" secondAttribute="top" id="KL7-Sn-akt"/>
+                            <constraint firstItem="29C-jM-L4S" firstAttribute="leading" secondItem="0g8-wr-LM7" secondAttribute="leading" id="NfH-17-ilA"/>
+                            <constraint firstAttribute="trailing" secondItem="0g8-wr-LM7" secondAttribute="trailing" id="Wx1-3q-YxZ"/>
+                            <constraint firstItem="29C-jM-L4S" firstAttribute="trailing" secondItem="0g8-wr-LM7" secondAttribute="trailing" id="lie-tr-hW4"/>
+                            <constraint firstItem="29C-jM-L4S" firstAttribute="top" secondItem="0g8-wr-LM7" secondAttribute="bottom" id="vRK-Kb-w22"/>
+                            <constraint firstItem="EOt-si-Zsi" firstAttribute="top" secondItem="5rB-Hv-uKQ" secondAttribute="bottom" constant="22" id="wjA-O8-z8J"/>
+                            <constraint firstItem="0g8-wr-LM7" firstAttribute="leading" secondItem="16r-Vn-Bai" secondAttribute="leading" id="zCk-2M-rz2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="EOt-si-Zsi"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="EOt-si-Zsi" id="bSm-kw-30x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7C7-Nk-erp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="343.17841079460271"/>
+        </scene>
+    </scenes>
+</document>
